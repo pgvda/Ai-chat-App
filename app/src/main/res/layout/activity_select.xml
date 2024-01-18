@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="8dp"
+        android:gravity="center"
+        tools:context=".SelectActivity">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/directIntent"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            app:rippleColor="@color/colorAccent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue">
+
+                <ImageView
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/project"
+                    android:layout_width="48dp"
+                    android:layout_gravity="center"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Go to Chat App"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/menu_background_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/directLaunch"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Launch"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/usingScreen"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:rippleColor="@color/colorAccent"
+            app:state_dragged="true"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue">
+
+                <ImageView
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/smartphone"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:drawablePadding="10dp"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Go to Ai Chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/blue"
+                    android:text="Ai Chat"
+                    android:textColor="@color/red"
+                    android:id="@+id/parentLayout"/>
+
+                <HorizontalScrollView
+                    android:layout_marginBottom="8dp"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/search_box"
+                        android:backgroundTint="@color/light_grey"
+                        android:orientation="vertical">
+                        <RadioGroup
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="16dp"
+                            android:id="@+id/screen_selector"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/calls"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@android:color/transparent"
+                                android:minWidth="48dp"
+                                android:minHeight="48dp"
+                                android:padding="8dp"
+                                android:text="Calls" />
+
+                            <RadioButton
+                                android:id="@+id/users"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@android:color/transparent"
+                                android:minHeight="48dp"
+                                android:padding="8dp"
+                                android:text="Users" />
+
+                            <RadioButton
+                                android:id="@+id/groups"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@android:color/transparent"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:minHeight="48dp"
+                                android:padding="8dp"
+                                android:text="Groups" />
+
+                            <RadioButton
+                                android:id="@+id/conversations"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@android:color/transparent"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:minHeight="48dp"
+                                android:padding="8dp"
+                                android:text="Chats" />
+
+                            <RadioButton
+                                android:id="@+id/moreinfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@android:color/transparent"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:minHeight="48dp"
+                                android:padding="8dp"
+                                android:text="More Info" />
+                        </RadioGroup>
+                        <RadioGroup
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="16dp"
+                            android:id="@+id/call_selector"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/audioCall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@android:color/transparent"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:padding="8dp"
+                                android:text="Audio Call"
+                                tools:ignore="TouchTargetSizeCheck" />
+                            <RadioButton
+                                android:id="@+id/videoCall"
+                                android:padding="8dp"
+                                android:button="@android:color/transparent"
+                                android:text="Video Call"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        </RadioGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <View
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/menu_background_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fragmentlaunch"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Navigate"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/usingComponent"
+            android:layout_margin="8dp"
+            android:layout_width="match_parent"
+            app:rippleColor="@color/colorAccent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blue">
+
+                <ImageView
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/wall"
+                    android:layout_width="48dp"
+                    android:layout_gravity="center"
+                    android:layout_height="48dp"/>
+                <TextView
+                    android:drawablePadding="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Shared"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/menu_background_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/componentLaunch"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_horizontal"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Show"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout"
+            android:layout_margin="8dp"
+            app:backgroundTint="@android:color/white"
+            android:layout_width="match_parent"
+            app:rippleColor="@color/colorAccent"
+            app:elevation="4dp"
+            android:text="Logout"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            app:cornerRadius="12dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
